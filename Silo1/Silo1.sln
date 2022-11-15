@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "Abstractions\Abstractions.csproj", "{495B48BB-0534-47A5-A0DB-0E48C132E43C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silo1.Abstractions", "Silo1.Abstractions\Silo1.Abstractions.csproj", "{495B48BB-0534-47A5-A0DB-0E48C132E43C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silo1", "Silo1\Silo1.csproj", "{437C2F63-B095-4098-9326-534C5FF707F2}"
 EndProject

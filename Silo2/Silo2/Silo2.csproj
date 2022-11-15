@@ -15,7 +15,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Silo1\Abstractions\Abstractions.csproj" />
+      <ProjectReference Include="..\..\Silo1\Silo1.Abstractions\Silo1.Abstractions.csproj" />
+      <ProjectReference Include="..\Silo2.Abstractions\Silo2.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

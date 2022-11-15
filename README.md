@@ -4,8 +4,8 @@ This showcases an issue with Orleans 7 serialization when running multiple solut
 
 Essentially:
 
-- `Silo1/` contains a solution with a simple Orleans silo, and also has an `Abstractions` class library that contains a `public abstract record BaseModel {}` type which contains some base properties for a state model. This is annotated with Orleans serializer attributes.
-- `Silo2/` contains a solution with a simple Orleans silo, which has a `<ProjectReference />` dependency on the `Abstractions` class library from `Silo1`. Ideally this would be a NuGet dependency, but isn't right now.
+- `Silo1/` contains a solution with a simple Orleans silo, and also has an `Silo1.Abstractions` class library that contains a `public abstract record BaseModel {}` type which contains some base properties for a state model. This is annotated with Orleans serializer attributes.
+- `Silo2/` contains a solution with a simple Orleans silo, which has a `<ProjectReference />` dependency on the `Silo1.Abstractions` class library from `Silo1`. Ideally this would be a NuGet dependency, but isn't right now.
 
 If starting the project like this:
 
@@ -59,6 +59,6 @@ Exc level 0: Orleans.Serialization.UnsupportedWireTypeException: A WireType valu
    at Orleans.Serialization.Invocation.ResponseCompletionSource`1.GetResult(Int16 token) in /_/src/Orleans.Serialization/Invocation/ResponseCompletionSource.cs:line 230
    at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
 --- End of stack trace from previous location ---
-   at Program.<Main>$(String[] args) in /Users/trond/Desktop/OrleansSerializationErrorDemo/Silo2/Silo2/Program.cs:line 21
+   at Program.<Main>$(String[] args) in /Users/trond/Desktop/OrleansSerializationErrorDemo/Silo2/Silo2/Program.cs:line 26
    at Program.<Main>(String[] args)
 ```

@@ -1,12 +1,8 @@
 using System.Text.Json;
 using Orleans.Runtime;
+using Silo2.Abstractions;
 
 namespace Silo2.Grains;
-
-public interface IStateGrain : IGrainWithStringKey
-{
-    Task<string> GetValue();
-}
 
 public class StateGrain : Grain, IStateGrain
 {
